@@ -1,0 +1,30 @@
+{
+  "name": "first-react-app",
+  "version": "1.0.0",
+  "description": "simple demo on react js",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joydip-git/verizon-reactjs-10thaugust2020.git"
+  },
+  "keywords": [
+    "reactapp",
+    "creating",
+    "from",
+    "scratch",
+    "react",
+    "without",
+    "tool"
+  ],
+  "author": "joydip",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joydip-git/verizon-reactjs-10thaugust2020/issues"
+  },
+  "homepage": "https://github.com/joydip-git/verizon-reactjs-10thaugust2020#readme",
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}

@@ -1,0 +1,10 @@
+VS Code extension:
+HTML Boilerplate
+ES7 React/Redux/GraphQL/React-Native snippets
+vscode-icons (by VS Code Icons Team)
+Prettier - Code formatter
+
+packages for React application:
+a. react
+b. react-dom
+npm i react react-dom --save

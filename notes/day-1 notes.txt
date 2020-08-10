@@ -1,0 +1,163 @@
+>node -v
+>npm - v
+
+React JS:
+
+Editor: VS Code, WebStorm, Atom, Sublime Text etc.
+core packages: Node JS (LTS) or Latest
+package manager: Node Package Manager (NPM)/Bower
+node_modules/bower_components
+
+Node JS: What is and why?
+
+jQuery: interacts with DOM (actual) directly, takes more time
+React JS: interacts with DOM (virtual) directly, faster compared to jQuery
+used to built UI (Component based)
+NOT a scripting language
+
+TypeScript, JavaScript, NativeScript, CoffeeScript,....
+
+JavaScript -- prototype based programming
+New Features in JS (2015....)
+ES6, ES7, ES8, ES 9....
+Web Appln: JavaScript
+Client-side and server side framework
+CS: Angular, React JS
+SS: Node JS
+
+Engine: compiler and provides a runtime
+chromium: chrome, opera,...
+Chrome: V8 engine, takes your JS code and converts into C++ code and executes the same
+
+main(){
+	var x = 10;
+	console.log(x);
+}
+
+Lars Bak : v8 engine
+Ryan Dahl : Node JS
+
+Node JS is built on the top of V8 engine
+server side framework: asynchronous code
+readFile, readFileSync, 
+
+ASP.NET, JSP-Servelet, etc.: server-side framework
+
+client-side frameworks/technologies: Angular, React JS, Vue,...
+RESTFul API applications...(ASP.NET MVC Web API, Spring-hibernet, Node JS...)
+
+Node JS+ Express JS: RESTFul API
+
+packages: Node JS
+
+object literal syntax:
+var joy = {
+  name:'',
+  print: function(){}
+}
+
+constructor function:
+function person(name, age){
+  this.name = name;
+  this.age = age;
+  this.print = function(){}
+}
+
+preparation
+execution
+
+
+prototype and prototype linking/chaining
+every object that is created in JS is linked to another object (NOT the object of Object type)
+a. object created using object literal syntax, Object.create() is linked to Object function's prototype object
+b. object created using constructor function syntax is linked to proptotype object of that function
+
+if any object is created using 'person' function, then this object will be linked to proptotype object for the person function
+
+prototype: is created for function constructor
+a. constructor: refers to the function itself
+b. __proto__: refers to the Object function's prototype
+
+function Object(){} --> prototype of object
+function person(){} --> prototype of person (linked to the Object prototype)
+
+two ways to access prototype objet:
+ctor-function-name.prototype
+object-created-based-on-ctor-function.__proto__
+
+//lexical this problem
+
+class X extends Component{
+
+  constructor(){
+
+   this.testHandler = this.testHandler.bind(this);
+  }
+
+  function testHandler(){
+
+  }
+
+ //fat arrow operator
+  testHandler = ()=>{}
+
+   render(){
+     return (
+      <Y handler = {this.testHandler.bind(this)}/>
+);
+   }
+}
+
+modules in JavaScript
+one file - one module
+n number of things in one file
+make all or some exportable
+
+module formats: format/style/syntax/rules to create a module in JS
+CommonJS, RequireJS, ES6,...etc.
+
+module loader:
+Common JS Loader, Babel Loader, TS loader, ES6 Loader, require.js
+
+React JS:
+diffing algorithm --> used to compare the actual DOM and the v-DOM
+
+any change in value (prop or state) in component will trigger re-rendering of VDOM UI.
+compare the actual DOM and the v-DOM
+after that only the elements in th actual dom whose values vdom has/have changed will be silently updated
+
+a. VDOM
+b. faster, efficient
+c. highly active community
+d. business logic and design together to stop the application from exploding
+e. server side rendering using Next.js
+f. 'state'--> helps you to maintain state of UI
+
+conversion from ES6 code ES5/ES3/ES2: transpiler
+
+Transpilers: Babel, TypeScript, CoffeScript, Dirt, GrooScript,JSIL, Opal, PureScript, Traceur,....
+
+Babel - React JS -plugins:
+a. convert ES6 code to older version of JS (@babel/preset-env)
+b. convert JSX code to vanilla JS code (@babel/preset-react)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
