@@ -1,0 +1,22 @@
+webpack with react js configuration:
+https://webpack.js.org/configuration/
+
+starter segment(config):
+https://webpack.js.org/guides/getting-started/
+
+ast explorer:
+https://astexplorer.net/
+
+transpilers:
+https://medium.com/front-end-weekly/a-world-of-javascript-transpilers-b3b7b880a1be
+
+creating plugins:
+https://medium.com/@abdellani/how-does-the-diff-algorithm-work-in-react-js-c4296548f84b
+
+AST:
+https://www.sitepoint.com/understanding-asts-building-babel-plugin/
+
+babel details:
+https://babeljs.io/docs/en/
+
+

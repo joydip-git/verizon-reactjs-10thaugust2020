@@ -1,0 +1,91 @@
+React JS:
+Components: core building block of React application
+Just a library for creating components in its core
+
+Component Tree: Series of components
+There wil be a Root component
+Infinite numbers of components will be nested in that root as child components
+
+Component returns/renders some JSX code (JSX element)
+JSX code: it defines which HTML code React should render to the real DOM
+JSX is NOT HTML rather it is pseudo-HTML (HTML-ish)
+JSX: syntactical sugarcoating for JavaScript, allows you to write pseudo-HTML code instead of numerous React.createElement method call
+
+import React from 'react'
+import ReactDOM from 'react-dom'
+
+const design = <p id='p1'>content</p>
+const element = React.createElememt('p',{id='p1'},content);
+{
+  type:'p',
+  props:{
+   id:'p1',
+   children:content
+  }
+}
+
+ReactDOM.render(element);
+
+Components:
+Functional (presentational/stateless) and class (stateful) component
+Component returns/renders some JSX code (JSX element)
+
+
+
+configuration of babel packages: .babelrc
+
+ES-older version--> packaged/bundled: all compiled/transpiled JS-->*.js, all CSS--> *.css, 
+                    minified and compressed
+
+steps:
+1. create a directory (blank)
+2. create following directories: public (index.html), src (components and index.js files)
+3. create package.json (at the root directory - using >npm init)
+4. install packages:
+
+a. react packages: react, react-dom
+
+b. transpiler packages[Babel]: 
+@babel/core: core transpiler, 
+@babel/cli: to run commands from console (CLI),
+@babel/preset-env: convert to ES6 React JS into ES-older version
+@babel/preset-react: converts JSX syntax into old JS
+
+c. bundler packages[webpack]: webpack, webpack-cli
+d. loader packages: 
+loader: transformer. A webpack loader takes something as input and produces o/p.
+
+webpack loader packages: babel-loader, html-loader, css-loader (style-loader)
+[css-loader: helps webpack collect CSS from all CSS files and put them into a string
+style-loader: it will take that string from css-loader and then put that string inside <style> tag in index.html. css-loader requires style-loader in order to complete its job]
+
+NPM commands for package installation:
+--------------------------------------------
+npm i react react-dom --save
+
+npm i @babel/core @babel/cli @babel/preset-env @babel/preset-react --save-dev
+
+npm i webpack webpack-cli webpack-dev-server --save-dev
+npm i babel-loader html-loader css-loader style-loader --save-dev
+npm i html-webpack-plugin --save-dev
+npm i clean-webpack-plugin --save-dev
+
+npm i serve -g (to run:  >serve .\dist -p 9000)
+
+e. development time server (dev-server): webpack-dev-server, lite-server,...
+f. production level host packages: serve, http-server...
+
+4. config files:
+a. .babelrc (root directory): put preset config there
+b. webpack.config.js (root directory)
+
+5. Code:
+first create index.html file with at least one element with some id which will be used as placeholder for entire react app
+a. create index.js inside src folder
+b. additional components and nest them inside a root component
+c. use ReactDOM.render(<root-component/>, document.getElementById('<id-of-the-element-in-index.html-file>') in index.js file to render the virtual DOM
+
+
+
+
+

@@ -1,0 +1,61 @@
+import React from "react";
+import Simple from "../component/Simple";
+
+const obj = new Simple();
+console.log(obj);
+const element = obj.render();
+console.log(element);
+//presentational component
+function App() {
+  const design = <div>{element}</div>;
+  // const design = <div></div>;
+  return design;
+}
+
+export default App;
+
+//attempt2":
+import React, { Component } from "react";
+import Simple from "../component/Simple";
+
+function Component() {
+  this.state = {
+    
+  }
+}
+function App() {
+  Component.call(this);
+  this.state = {
+    counter: 0,
+  };
+  return React.createElement('div',null,<button onClick=this.increaseCounter.bind(this))
+}
+App.prototype.increaseCounter = function () {
+  this.state.counter++;
+};
+class App extends Component {
+  constructor() {
+    //Component.call(this)
+    super();
+    this.state = {
+      counter: 0,
+    };
+  }
+
+  increaseCounter() {
+    console.log(this);
+    this.state.counter++;
+  }
+  render() {
+    const design = (
+      <div>
+        <button onClick={this.increaseCounter}>{this.state.counter}</button>
+        <Simple />
+      </div>
+    );
+    return design;
+  }
+}
+
+export default App;
+
