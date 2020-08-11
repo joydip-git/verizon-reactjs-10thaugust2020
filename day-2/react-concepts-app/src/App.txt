@@ -1,0 +1,59 @@
+import React, { Component } from "react";
+import "./App.css";
+import PersonDetail from "./components/PersonDetail/PersonDetail";
+
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      people: [
+        {
+          name: "anil",
+          age: 34,
+          salary: 1000,
+        },
+        {
+          name: "sunil",
+          age: 43,
+          salary: 2000,
+        },
+      ],
+    };
+  }
+  render() {
+    // let element1 = PersonDetail({ person: this.state.people[0], value: 20 });
+    // console.log(element1);
+    // const element2 = <PersonDetail person={this.state.people[1]} val={20} />;
+    // console.log(element2);
+    return (
+      <div className="App">
+        {/* {element1} */}
+        <PersonDetail person={this.state.people[0]} value={20} />
+        <br />
+        {/* {element2} */}
+        <PersonDetail person={this.state.people[1]} value={30}>
+          {"hello world"}
+        </PersonDetail>
+      </div>
+    );
+  }
+}
+
+export default App;
+/**
+ * {
+ * type:'',
+ * props:{
+ * "1":"anil",
+ * "2":34,
+ *
+ * }
+ * }
+ */
+/**
+ * type:
+ * props:{
+ * person:{}
+ * children:""
+ * }
+ */
