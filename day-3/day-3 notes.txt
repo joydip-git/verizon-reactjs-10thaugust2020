@@ -107,5 +107,29 @@ HOC, RPC
    }
 }
 
+lifecycle methods:
+1. mounting:
+ a. constructor
+ b. getDerivedStateFromProps
+ c. render
+ d. componentDidMount (One time)-->Actual DOM
+
+2. updation:
+ a. getDerivedStateFromProps
+ b. shouldComponentUpdate
+ c. render
+ d. getSnapshotBeforeUpdate => object
+ e. componentDidUpdate(..,snapshot)-->repeated
+
+3. destruction
+ a. componentWillUnmount
+
+4. error
+ a. componentDidCatch
+
+
+
+
+
 
 
