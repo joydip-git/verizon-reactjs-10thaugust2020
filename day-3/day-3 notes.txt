@@ -1,0 +1,111 @@
+environment variable path:
+C:\Users\<username>\AppData\Roaming\npm
+
+explicit path set:
+npm config set prefix c:/Users/<username>/AppData/Roaming/npm
+
+class component: class render method returns JSX
+functional component: function returns JSX element
+return JSX element
+
+difference:
+a. syntax:
+class A extends Component ({Component} react package)
+class A extends Component{
+    constructor(props){
+      super(props);
+    }
+    render(){
+      return ();
+    }
+}
+b. access to state
+c. access to lifecycle methods
+d. access state and props: use this keyword
+e. if you need to manage state or access to lifecycle hooks (methods) and also don't want to use React Hooks
+
+issues:
+understand this keyword (bind event handlers)
+classes don't minify that well
+component objects are created separately first and then you get your jsx element
+AOT: Ahaed-of-time (Angular, Svetle, Glimmer..)-> classes sometimes reduce that extra edge of performance that can be acheieved by AOT
+
+*there is no easy way to to attach reusable piece of logic to the components in React
+
+a. syntax:
+function A(props){ return ();}
+const A = (props)=>{return ();}
+b. doesn't have access to state
+**BUT, using useState React hook you can have state inside functional components
+c. Do not access to lifecycle methods
+**BUT, using useEffect React hook you can have access to lifecycle methjods inside functional components
+d. access state and props: without this keyword
+e. use all other cases
+
+issue:
+*there is no easy way to to attach reusable piece of logic to the components in React
+
+use functional components as much possible
+Lift state up:
+create a container component and maintain state over there
+pass data and if required event handlers to nested components via props
+contextAPI
+
+state: 
+it is a JS object (** w.r.t. class component)
+maintained privately inside the component
+can influence what is rendered in the browser
+can be changed within the component only 
+
+manual modification doesn't notify React to re-render the component
+this.state.counter++;
+
+UI data will becone unpredictable
+
+constructor(props){
+super(props);
+this.state={name:'', counter:0}
+}
+
+using setState:
+a.  create a new state and pass it simply to setState
+this.setState({name: <new-value>});
+b. need to calculate new state based on old state
+this.setState(fn, another);
+const fn = (oldState)=>{
+return {
+   counter: oldState.counter+1
+  }
+}
+c. need to calculate new state based on old state and old props
+this.setState(fn);
+const fn = (oldState, props)=>{
+return {
+   counter: oldState.counter + props.value
+  }
+}
+const another = ()=>{ this.props or this.state}
+
+props:
+IMMUTABLE 
+w.r.t. props every functiona component is a pure function and a class a pure class
+events as props:
+
+binding:
+one-way binding:
+two-way binding: {this.props.value} {this.props.change}
+
+HOC, RPC
+
+{
+   type:'',
+   key:null,
+   props:{
+     person:{},
+     value:21,
+     children:....
+   }
+}
+
+
+

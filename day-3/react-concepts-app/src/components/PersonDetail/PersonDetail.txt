@@ -1,0 +1,33 @@
+import React from "react";
+
+// const PersonDetail = ({ person, value, children }) => {
+const PersonDetail = (props) => {
+  //   console.log(props);
+  /**
+   * {
+   * props:{
+   * person:{},
+   * value:,
+   * children:
+   * }
+   * }
+   */
+  return (
+    <div>
+      <p>
+        <span>Name:</span>
+        {props.person.name}
+        <br />
+        <span>Age:</span>
+        {props.person.age}
+        <br />
+        <span>Salary:</span>
+        {props.person.salary}
+      </p>
+      {props.children}
+      {props.value}
+    </div>
+  );
+};
+
+export default PersonDetail;
