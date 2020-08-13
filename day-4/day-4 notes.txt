@@ -1,0 +1,25 @@
+<HOC>
+  <OC />
+</HOC>
+
+CountRP.js
+functional component
+
+const hOC = (OC)=>{
+   
+  //class HOC extends Comp{}
+  return HOC;
+}
+generators in JS?
+enumerator/iterator
+
+Redux:
+state      + reducer:   store
+(JS object)  function   object (reducer+state)
+
+actions: list of actions
+action => js object { type of action + additional data [payload]}
+
+disptacher  => function which is used to dispatch actions to store, which is received by reducer
+
+subscription => components can subscribe to it to get newstate
