@@ -1,11 +1,8 @@
 import React, { Component } from "react";
-//import axios from "axios";
-//import ProductService from "../../service/ProductService";
 import { getProducts } from "../../service/ProductService";
-import ProductTable from "../../components/ProductTable/ProductTable";
+import ProductTable from "../../components/Products/ProductTable/ProductTable";
 
 export default class ProductList extends Component {
-  //rconst
   constructor(props) {
     super(props);
     this.state = {
@@ -14,9 +11,6 @@ export default class ProductList extends Component {
   }
 
   componentDidMount() {
-    //code to get all products
-    //Promise<AxiosResponse<any>>
-    //new ProductService().
     getProducts()
       .then((response) => {
         this.setState({

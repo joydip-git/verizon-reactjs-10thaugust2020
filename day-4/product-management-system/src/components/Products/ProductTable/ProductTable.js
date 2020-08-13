@@ -1,10 +1,11 @@
 import React from "react";
+import ProductRow from "../ProductRow/ProductRow";
 
 export default function ProductTable({ products }) {
   return (
-    <div>
-      <table>
-        <thead>
+    <div className="table-responsive">
+      <table className="table">
+        <thead style={{ backgroundColor: "burlywood" }}>
           <tr>
             <th>Image</th>
             <th>Name</th>
@@ -13,9 +14,9 @@ export default function ProductTable({ products }) {
           </tr>
         </thead>
         <tbody>
-          {/* {products.map((p) => {
-            return <ProductRow person={p} key={p.productId} />;
-          })} */}
+          {products.map((p) => {
+            return <ProductRow product={p} key={p.productId} />;
+          })}
         </tbody>
       </table>
     </div>
