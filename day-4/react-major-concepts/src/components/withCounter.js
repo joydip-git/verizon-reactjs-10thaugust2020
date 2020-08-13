@@ -7,7 +7,7 @@ import React, { Component, useState } from "react";
 //       return { counter: ps.counter + 1 };
 //     });
 //   };
-//   return { ...props.children };
+//   return { ...props};
 // };
 
 // export default WithCounter;

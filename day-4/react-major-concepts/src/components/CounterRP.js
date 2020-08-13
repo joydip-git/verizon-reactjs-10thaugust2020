@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-
+import React, { Component, useState } from "react";
+/*
 class CounterRP extends Component {
   constructor(props) {
     super(props);
@@ -18,4 +18,14 @@ class CounterRP extends Component {
     );
   }
 }
+*/
+const CounterRP = ({ render }) => {
+  const [counterState, setCounterState] = useState({ counter: 0 });
+  const increaseCounter = () => {
+    setCounterState((ps) => {
+      return { counter: ps.counter + 1 };
+    });
+  };
+  return <div>{render(counterState.counter, increaseCounter)}</div>;
+};
 export default CounterRP;
