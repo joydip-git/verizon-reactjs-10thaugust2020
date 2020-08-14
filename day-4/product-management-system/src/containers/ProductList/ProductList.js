@@ -15,7 +15,11 @@ class ProductList extends Component {
     } else if (error) {
       design = <h1>Error: {error}</h1>;
     } else {
-      design = <ProductTable products={products} />;
+      design = (
+        <div className="panel panel-primary">
+          <ProductTable products={products} />
+        </div>
+      );
     }
     return <div>{design}</div>;
   }

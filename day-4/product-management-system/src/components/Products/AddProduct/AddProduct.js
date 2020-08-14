@@ -6,14 +6,14 @@ class AddProduct extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      productId: null,
-      productName: null,
-      productCode: null,
-      description: null,
-      releaseDate: null,
-      price: null,
-      starRating: null,
-      imageUrl: null,
+      productId: undefined,
+      productName: undefined,
+      productCode: undefined,
+      description: undefined,
+      releaseDate: undefined,
+      price: undefined,
+      starRating: undefined,
+      imageUrl: undefined,
     };
   }
   submitData = (event) => {
@@ -177,4 +177,10 @@ const mapDispatchToProps = (dispatch) => {
       dispatch(addProductsAsync(product, callback)),
   };
 };
+// const mapDispatchToProps = (dispatch) => {
+//   return {
+//     addProduct: (product, callback) =>
+//       dispatch({ type: "ADD_PRODUCT_REQUEST" }),
+//   };
+// };
 export default connect(mapStateToProps, mapDispatchToProps)(AddProduct);

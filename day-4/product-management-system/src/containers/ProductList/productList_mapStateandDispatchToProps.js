@@ -1,4 +1,5 @@
 import { fetchProductsAsync } from "../../redux/productActions";
+import { getProductsRequestActionCreator } from "../../redux/productActions";
 
 //will be passed to the store
 // then this call back function will be used by the store to configure the properties
@@ -6,6 +7,7 @@ import { fetchProductsAsync } from "../../redux/productActions";
 //of the state
 //so that component can receive the values from the state
 
+//const action = getProductsRequestActionCreator();
 export const mapStateToProps = (state) => {
   return {
     products: state.productState.products,
@@ -17,8 +19,13 @@ export const mapStateToProps = (state) => {
 export const mapDispatchToProps = (dispatch) => {
   return {
     //what a mistake!!!!!!!
-    getProducts: () => dispatch(fetchProductsAsync()),
+    //{type:}
+    getProducts: () => dispatch(getProductsRequestActionCreator()),
   };
+  // return {
+  //   //what a mistake!!!!!!!
+  //   getProducts: () => dispatch(fetchProductsAsync()),
+  // };
 };
 
 // const connector = connect(mapStateToProps);
