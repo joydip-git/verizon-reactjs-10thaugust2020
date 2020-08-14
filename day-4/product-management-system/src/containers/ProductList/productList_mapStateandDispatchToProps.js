@@ -8,15 +8,16 @@ import { fetchProductsAsync } from "../../redux/productActions";
 
 export const mapStateToProps = (state) => {
   return {
-    products: state.products,
-    loading: state.loading,
-    error: state.error,
+    products: state.productState.products,
+    loading: state.productState.loading,
+    error: state.productState.error,
   };
 };
 
 export const mapDispatchToProps = (dispatch) => {
   return {
-    getProducts: () => dispatch(fetchProductsAsync),
+    //what a mistake!!!!!!!
+    getProducts: () => dispatch(fetchProductsAsync()),
   };
 };
 

@@ -11,6 +11,26 @@ const GET_ALL_PRODUCTS_REQUEST = "GET_ALL_PRODUCTS_REQUEST";
 const GET_ALL_PRODUCTS_SUCCESS = "GET_ALL_PRODUCTS_SUCCESS";
 const GET_ALL_PRODUCTS_FAILURE = "GET_ALL_PRODUCTS_FAILURE";
 
+const getProductsSuccessActionCreator = (products) => {
+  return {
+    type: GET_ALL_PRODUCTS_SUCCESS,
+    value: products,
+  };
+};
+
+const getProductsRequestActionCreator = () => {
+  return {
+    type: GET_ALL_PRODUCTS_REQUEST,
+  };
+};
+
+const getProductsFailureActionCreator = (errorMessage) => {
+  return {
+    type: GET_ALL_PRODUCTS_FAILURE,
+    value: errorMessage,
+  };
+};
+
 const initialState = {
   products: [],
   loading: true,
@@ -64,4 +84,4 @@ const fetchProductsAsync = () => {
   };
 };
 
-//store.dispatch(fetchProductsAsync()); //?
+store.dispatch(fetchProductsAsync()); //?

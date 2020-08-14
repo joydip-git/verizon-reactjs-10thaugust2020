@@ -4,7 +4,9 @@ const getProducts = () => {
   return axios.get(url);
 };
 const getProductById = (id) => {};
-const addProduct = (product) => {};
+const addProduct = (product) => {
+  return axios.post(url, product);
+};
 const removeProduct = (pid) => {};
 const updateProduct = (product) => {};
 export {

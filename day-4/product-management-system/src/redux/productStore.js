@@ -1,12 +1,11 @@
-import { productReducer } from "./productReducer";
+import rootReducer from "./index";
 import reduxLogger from "redux-logger";
 import thunkMiddleware from "redux-thunk";
 import { applyMiddleware, createStore } from "redux";
+import { composeWithDevTools } from "redux-devtools-extension";
 
-//const logger = reduxLogger.createLogger();
-
-const store = createStore(
-  productReducer,
-  applyMiddleware(reduxLogger, thunkMiddleware)
+const productStore = createStore(
+  rootReducer,
+  composeWithDevTools(applyMiddleware(reduxLogger, thunkMiddleware))
 );
-export default store;
+export default productStore;
