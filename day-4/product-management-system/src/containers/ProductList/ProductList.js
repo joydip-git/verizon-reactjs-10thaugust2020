@@ -1,33 +1,27 @@
 import React, { Component } from "react";
-import { getProducts } from "../../service/ProductService";
 import ProductTable from "../../components/Products/ProductTable/ProductTable";
+import { connect } from "react-redux";
+import * as mapper from "./productList_mapStateandDispatchToProps";
 
-export default class ProductList extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      products: null,
-    };
-  }
-
+class ProductList extends Component {
   componentDidMount() {
-    getProducts()
-      .then((response) => {
-        this.setState({
-          products: response.data,
-        });
-      })
-      .catch((err) => console.log(err.message));
+    this.props.getProducts();
   }
   render() {
-    return (
-      <div>
-        {this.state.products ? (
-          <ProductTable products={this.state.products} />
-        ) : (
-          "loading..."
-        )}
-      </div>
-    );
+    const { loading, error, products } = { ...this.props };
+    let design = null;
+    if (loading) {
+      design = <h1>Loading...</h1>;
+    } else if (error) {
+      design = <h1>Error: {error}</h1>;
+    } else {
+      design = <ProductTable products={products} />;
+    }
+    return <div>{design}</div>;
   }
 }
+
+export default connect(
+  mapper.mapStateToProps,
+  mapper.mapDispatchToProps
+)(ProductList);

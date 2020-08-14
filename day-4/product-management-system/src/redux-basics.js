@@ -54,4 +54,5 @@ const subscription = store.subscribe(() => {
 store.dispatch(increaseAction(10));
 store.dispatch(increaseAction(10));
 store.dispatch(decreaseAction(5));
+console.log("state", store.getState());
 subscription();
